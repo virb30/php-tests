@@ -2,10 +2,10 @@
 
 require __DIR__."/../vendor/autoload.php";
 
-use App\Example;
+use App\Module;
 
-$example = new Example(false);
+require_once __DIR__.'/../src/functions.php';
 
-$example->execute();
+$module = new Module();
 
-phpinfo();
+echo $module->execute($_GET['text']);
